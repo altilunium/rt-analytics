@@ -1,0 +1,18 @@
+
+<script>
+
+
+let data = new FormData()
+  data.append('a1','a')
+  
+  fetch('be.php',{
+    method : 'POST',
+    body: data,
+  }).then(data => {
+    data.text().then(function(result){
+      console.log("A!")
+      console.log(result)
+    })
+  })
+
+  </script>
